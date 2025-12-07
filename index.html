@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NanoGrout | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>NanoGrout</h1>
+    <p>Advanced Nano Technology for Construction</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h2>Upload Your Construction / NanoGrout Image</h2>
+
+    <!-- Upload Button -->
+    <input type="file" accept="image/*" id="imageInput" style="display:none;">
+    <button id="uploadBtn">Click to Add a Photo</button>
+
+    <!-- Preview -->
+    <img id="previewImage" src="" alt="Uploaded Image" style="display:none;">
+
+    <p style="text-align:center; margin-top:25px; font-size:1.1rem;">
+      Showcase your NanoGrout product images, construction work photos, or project documentation.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NanoGrout Construction Solutions</p>
+  </footer>
+
+  <script>
+    const uploadBtn = document.getElementById("uploadBtn");
+    const imageInput = document.getElementById("imageInput");
+    const previewImage = document.getElementById("previewImage");
+
+    uploadBtn.addEventListener("click", () => imageInput.click());
+
+    imageInput.addEventListener("change", function() {
+      const file = this.files[0];
+      if(file){
+        previewImage.style.display = "block";
+        previewImage.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>

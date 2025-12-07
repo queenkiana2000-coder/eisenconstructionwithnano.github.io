@@ -1,0 +1,93 @@
+/* ===== BODY AND BACKGROUND ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  /* Background Image */
+  background-image: url('https://nanoztec.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-28-at-10.10.29-529x1024.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #2b2b2b;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: rgba(45, 62, 79, 0.9);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  background-color: rgba(31, 42, 51, 0.9);
+  text-align: center;
+  padding: 12px 0;
+}
+
+nav a {
+  color: #cfcfcf;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2rem;
+}
+
+nav a:hover, nav a.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 900px;
+  background: rgba(255,255,255,0.9);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  text-align: center;
+  color: #2d3e4f;
+}
+
+/* ===== IMAGE PREVIEW ===== */
+#previewImage {
+  display: block;
+  margin: 25px auto;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== BUTTON ===== */
+#uploadBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #2d3e4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#uploadBtn:hover {
+  background-color: #3b5166;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  background-color: rgba(45, 62, 79, 0.9);
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+}
