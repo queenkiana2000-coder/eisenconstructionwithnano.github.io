@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NanoGrout Construction</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+
+      /* Using your provided image as the page background */
+      background-image: url('https://nanoztec.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-28-at-10.10.29-529x1024.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      color: #2b2b2b;
+    }
+
+    header {
+      background-color: rgba(45, 62, 79, 0.9);
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    nav {
+      background-color: rgba(31, 42, 51, 0.9);
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #cfcfcf;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .container {
+      max-width: 900px;
+      background: rgba(255,255,255,0.9);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2d3e4f;
+    }
+
+    #previewImage {
+      display: block;
+      margin: 25px auto;
+      width: 400px;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    #uploadBtn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 20px;
+      font-size: 1rem;
+      background-color: #2d3e4f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #uploadBtn:hover {
+      background-color: #3b5166;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(45, 62, 79, 0.9);
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NanoGrout</h1>
+    <p>Advanced Nano Technology for Construction</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="container">
+    <h2>Upload Your Construction / NanoGrout Image</h2>
+
+    <!-- Button to upload a photo -->
+    <input type="file" accept="image/*" id="imageInput" style="display:none;">
+    <button id="uploadBtn">Click to Add a Photo</button>
+
+    <!-- Preview of uploaded image -->
+    <img id="previewImage" src="" alt="Uploaded Image" style="display:none;">
+
+    <p style="text-align:center; margin-top:25px; font-size:1.1rem;">
+      Showcase your NanoGrout product images, construction work photos, or project documentation.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NanoGrout Construction Solutions</p>
+  </footer>
+
+  <script>
+    const uploadBtn = document.getElementById("uploadBtn");
+    const imageInput = document.getElementById("imageInput");
+    const previewImage = document.getElementById("previewImage");
+
+    uploadBtn.addEventListener("click", () => {
+      imageInput.click();
+    });
+
+    imageInput.addEventListener("change", function() {
+      const file = this.files[0];
+      if (file) {
+        previewImage.style.display = "block";
+        previewImage.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>
